@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*, ::before, ::after{
+    font-family: "Montserrat";
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    padding: 0;
+    background-color: yellowgreen;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height:100px;
+    width: 100vw;
+    border-bottom: 1px solid black;
+    background: linear-gradient(0.25turn,darkblue, brown);
+    box-shadow: 0 2.5px 5px red;
+}
+
+#title{
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+}
+
+#search{
+    width: 500px;
+    height: 35px;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search #category{
+    outline: none;
+    border: 0;
+    height: 100%;
+    width: 30%;
+    border-radius: 20px 0 0 20px;
+    background-color: white;
+}
+
+#search #searchbar{
+    outline: none;
+    border: 0;
+    padding: 10px;
+    margin:0;
+    height: 100%;
+    width: 50%;
+}
+
+#search #searchbutton{
+    outline:none;
+    border: 0;
+    height: 100%;
+    width: 18%;
+    background-color: rgba(30, 143, 255, 0.8);
+    color: white;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+#search #searchbutton:active{
+    background-color: dodgerblue;
+}
+
+#login_button{
+    width: 100px;
+    height: 40px;
+    background-color: orangered;
+    counter-reset: white;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    color: white;
+    font-weight: 900;
+}
+
+#login_button:active{
+    border: 2px solid dodgerblue;
+}
+
+#icon{
+    display:flex;
+    color: white;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icons:hover{
+    color:orangered;
+}
+
+ .nav_bar{
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 50px;
+    background:linear-gradient(0.25turn, yellow, orangered);
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.nav_bar ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+.nav_bar ul a{
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+
+.nav_bar ul a:hover{
+    border-bottom: 2px solid dodgerblue;
+    color: dodgerblue
+}
+
+.container{
+    width: 95%;   
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin:auto;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 0 2.5px 5px 5px lightgray;
+}
+
+.slideshow{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    height: 360px;
+}
+
+.slideshow .slides{
+    display: none;
+}
+
+.slideshow .active{
+    display: block;
+    width: 90%;
+    height: 100%;
+}
+
+.slideshow span{
+    cursor: pointer;
+} 
+
+.collections{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+} 
+
+.collections .box{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(to right bottom, pink 50%, white 50%);
+    color: white;
+    font-size: 45px;
+} 
+
+.collections .box a{
+    text-decoration: none;
+    color: dodgerblue
+} 
+
+.collections img{
+    display: block;
+    margin-left: auto;
+    width: 200px;
+    height: 200px;
+}
+
+.footer{   
+    width: 100vw;
+    height: 50px;
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+    font-weight: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+} 

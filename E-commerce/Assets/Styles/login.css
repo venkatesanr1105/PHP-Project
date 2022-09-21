@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*, ::after, ::before{
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container #first{
+    background-color: dodgerblue;
+    color: white;
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 2.5px 5px 5px lightgray;
+}
+
+.container .heading1{
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.container .heading2{
+    font-size: 20px;
+    font-weight: 450;
+}
+.container #first img{
+    width: 200px;
+    height: 200px
+}
+
+.container #second{
+    width: 400px;
+    height: 600px;    
+    border-radius: 10px;
+    box-shadow: 2.5px 2.5px 5px 5px lightgray;
+}
+
+.container #second .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container #second .form .section{
+    width: 100%;
+}
+
+.container #second .form .section label{
+    padding-left: 5%;
+}
+
+.container #second .form .section .fields{
+    width: 90%;
+    height: 50px;
+    display: block;
+    margin: auto;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.container #second .form .section .fields:focus{
+    border: 2px solid dodgerblue;
+    background-color: rgba(30, 143, 255, 0.25);
+}
+
+.container #second .form .button{
+    background-color: orangered;
+    color: white;
+    width: 50%;
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.container #second .form .button:active{
+    border: 2px solid dodgerblue;
+}
+
+.container #second a{
+    text-decoration: none;
+    color: dodgerblue;
+    font-weight: 900;
+
+}
+
+.success{
+    background-color: rgba(0, 128, 0, 0.25);
+}
+
+.error{
+    background-color:  rgba(128,0,0,.25);
+}
+.box{
+    width: 300px;
+    height: 50px;
+    background-color: rgba(255, 166, 0, 0.1);
+    margin: auto;
+    color: orange;
+    border-top: 3px solid orange;
+    text-align: center;
+    animation: 3s slidein; 
+}
+
+@keyframes slidein {
+    from{
+        border-top: 3px solid orange;
+    }
+    to{
+        border-top: 3px solid white;
+    }
+}
