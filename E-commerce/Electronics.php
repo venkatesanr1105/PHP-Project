@@ -19,7 +19,7 @@
                     <option value="Electronics">Electronics</option>
                     <option value="Fashion">Fashion</option>
                     <option value="Furnitures">Furnitures</option>
-                    <option value="Home Appliances">Home Appliances</option>
+                    <option value="Home Appliances">Home Appliances</option>  
                 </select>
                 <input type="search" name="search" id="searchbar" placeholder = "Search here">
                 <input type="button" value="Search" id="searchbutton">
@@ -45,7 +45,6 @@
                 <li><a href="Fashion.php">Fashion</a></li>
                 <li><a href="Furnitures.php">Furnitures</a></li>
                 <li><a href="Homeappliances.php">Home Appliances</a></li>
-                <li><a href="Electronicsgadgets.php">Electronics Gadgets</a></li>
             </ul>
         </nav>
         <div class="container">
@@ -128,10 +127,28 @@
                             <span>Social</span>
                         </div>
         </div>
-        <script src = "Assets\Scripts\store.js"></script>
         <script>
     	if('<?php echo $value; ?>')
     		login_button.remove();    		
+            var btn = document.getElementsByClassName("cart_button");
+
+for(i=0;i<btn.length;i++)
+{
+    btn[i].onclick = (event) => {
+        var parent = event.target.parentElement;
+        var product = parent.firstElementChild;
+        var name = product.nextElementSibling;
+        var price = name.nextElementSibling;
+        localStorage.setItem("product",product.outerHTML);
+        localStorage.setItem("name",name.outerHTML);
+        localStorage.setItem("price",price.outerHTML);
+    }
+}
+
+login_button.onclick = () => {
+    window.location.href = "login.php";
+}
+
     </script>
 </body>
 </html>

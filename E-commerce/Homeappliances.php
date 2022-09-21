@@ -49,66 +49,66 @@
             </ul>
         </nav>
         <div class="container">
-            <span class="topic">Laptop</span>
+            <span class="topic">Kitchen</span>
             <div class="category">
                 <div class = "product">             
-                    <img src="Assets/Images/dell.svg">
-                    <span class = "HP">Dell</span>
-                    <span class = "price">80000</span>
+                    <img src="Assets/Images/mixer.svg">
+                    <span class = "HP">Juice Mixer</span>
+                    <span class = "price">5000</span>
                     <button class = "cart_button">Add to cart</button>
                 </div>
                 <div class = "product">             
-                    <img src="Assets/Images/hp.svg">
-                    <span class = "name">HP</span>
-                    <span class = "price">50000</span>
+                    <img src="Assets/Images/oven.svg">
+                    <span class = "name">Microwave Oven</span>
+                    <span class = "price">10000</span>
                     <button class = "cart_button">Add to cart</button>
                 </div>
                 <div class = "product">             
-                    <img src="Assets/Images/asus.svg">
-                    <span class = "name">Asus</span>
-                    <span class = "price">65000</span>
+                    <img src="Assets/Images/fridge.svg">
+                    <span class = "name">Refridgerator</span>
+                    <span class = "price">15000</span>
                     <button class = "cart_button">Add to cart</button>
                 </div>
             </div>
-            <span class="topic">Mobile</span>
+            <span class="topic">Living</span>
             <div class="category">
                 <div class="product">
-                    <img src="Assets\Images\samsung.svg">
-                    <span class="name">Samsung</span>
+                    <img src="Assets\Images\tv.svg">
+                    <span class="name">Television</span>
+                    <span class="price">20000</span>
+                    <button class="cart_button">Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="Assets\Images\sound.svg">
+                    <span class="name">Music System</span>
+                    <span class="price">10000</span>
+                    <button class="cart_button">Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="Assets\Images\fan.svg">
+                    <span class="name">Fan</span>
+                    <span class="price">3500</span>
+                    <button class="cart_button">Add to cart</button>
+                </div>
+            </div>
+            <span class="topic">Bed Room</span>
+            <div class="category">
+                <div class="product">
+                    <img src="Assets\Images\ac.svg">
+                    <span class="name">Air Conditioner</span>
                     <span class="price">30000</span>
-                    <button class="cart_button">Add to cart</button>
-                </div>
-                <div class="product">
-                    <img src="Assets\Images\apple.svg">
-                    <span class="name">Apple</span>
-                    <span class="price">100000</span>
-                    <button class="cart_button">Add to cart</button>
-                </div>
-                <div class="product">
-                    <img src="Assets\Images\oneplus.svg">
-                    <span class="name">Oneplus</span>
-                    <span class="price">50000</span>
-                    <button class="cart_button">Add to cart</button>
-                </div>
-            </div>
-            <span class="topic">Accessories</span>
-            <div class="category">
-                <div class="product">
-                    <img src="Assets\Images\charger.svg">
-                    <span class="name">Charger</span>
-                    <span class="price">500</span>
                     <button class = "cart_button">Add to cart</button>
                 </div>
                 <div class="product">
-                    <img src="Assets\Images\headphone.svg">
-                    <span class="name">Headphone</span>
-                    <span class="price">1000</span>
+                    <img src="Assets\Images\lamp.svg">
+                    <span class="name">Lamp</span>
+                    <span class="price">5000</span>
                     <button class = "cart_button">Add to cart</button>
                 </div>
                 <div class="product">
-                    <img src="Assets\Images\mouse.svg">
-                    <span class="name">Mouse</span>
-                    <span class="price">750</span>
+                    <img src="Assets\Images\washingmachine.svg">
+                    <span class="name">Washing Machine</span>
+                    <span class="price">20000</span>
                     <button class = "cart_button">Add to cart</button>
                 </div>
             </div>
@@ -128,10 +128,29 @@
                             <span>Social</span>
                         </div>
         </div>
-        <script src = "Assets\Scripts\store.js"></script>
         <script>
     	if('<?php echo $value; ?>')
     		login_button.remove();    		
+            var btn = document.getElementsByClassName("cart_button");
+
+for(i=0;i<btn.length;i++)
+{
+    btn[i].onclick = (event) => {
+        var parent = event.target.parentElement;
+        var product = parent.firstElementChild;
+        var name = product.nextElementSibling;
+        var price = name.nextElementSibling;
+        localStorage.setItem("product",product.outerHTML);
+        localStorage.setItem("name",name.outerHTML);
+        localStorage.setItem("price",price.outerHTML);
+    }
+}
+
+login_button.onclick = () => {
+    window.location.href = "login.php";
+}
+
+console.log("Hi")
     </script>
 </body>
 </html>

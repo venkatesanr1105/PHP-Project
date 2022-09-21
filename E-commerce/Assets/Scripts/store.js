@@ -12,3 +12,9 @@ for(i=0;i<btn.length;i++)
         localStorage.setItem("price",price.outerHTML);
     }
 }
+
+login_button.onclick = () => {
+    window.location.href = "login.php";
+}
+
+console.log("Hi")

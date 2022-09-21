@@ -63,19 +63,19 @@
                         <div class="name">
                             Laptop collections
                         </div>
-                        <a href="#" class="button">shop now</a>
+                        <a href="Electronics.php" class="button">shop now</a>
                         <img src="Assets/Images/laptop.svg">
                     </div>
                     <div class="box">
                         <div class="name">
                             Mobile collections
                         </div>
-                        <a href="#" class="button">shop now</a>
+                        <a href="Electronics.php" class="button">shop now</a>
                         <img src="Assets/Images/mobile.svg">
                     </div>
                     <div class="box">
                         <div class="name">Accessories collection</div>
-                        <a href="#" class="button">shop now</a>
+                        <a href="Electronics.php" class="button">shop now</a>
                         <img src="Assets/Images/accessories.svg">
                     </div>
             </div>
