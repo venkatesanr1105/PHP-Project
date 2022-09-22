@@ -34,7 +34,7 @@
                     <figcaption>Your wishlist</figcaption>
                 </figure>
                 <figure class="icons">
-                    <span class="material-icons-outlined">shopping_cart</span>
+                    <span class="material-icons-outlined" id = "cart">shopping_cart</span>
                     <figcaption>Your Cart</figcaption>
                 </figure>
             </div>
@@ -128,29 +128,11 @@
                             <span>Social</span>
                         </div>
         </div>
+        <script src = "Assets\Scripts\Furnitures.js"></script>
         <script>
-    	if('<?php echo $value; ?>')
-    		login_button.remove();    		
-            var btn = document.getElementsByClassName("cart_button");
+            if("<?php echo $value; ?>")
+                login_button.remove();    		
+        </script>
 
-for(i=0;i<btn.length;i++)
-{
-    btn[i].onclick = (event) => {
-        var parent = event.target.parentElement;
-        var product = parent.firstElementChild;
-        var name = product.nextElementSibling;
-        var price = name.nextElementSibling;
-        localStorage.setItem("product",product.outerHTML);
-        localStorage.setItem("name",name.outerHTML);
-        localStorage.setItem("price",price.outerHTML);
-    }
-}
-
-login_button.onclick = () => {
-    window.location.href = "login.php";
-}
-
-console.log("Hi")
-    </script>
 </body>
 </html>

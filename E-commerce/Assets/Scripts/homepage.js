@@ -1,5 +1,9 @@
 login_button.onclick = () => {
-    window.location.href = "http://onlineshoppingportal.com/login.php";
+    window.location.href = "login.php";
+}
+
+cart.onclick = () => {
+    window.location.href = "cart.php";
 }
 
 left.onclick = (event) => {
@@ -25,5 +29,17 @@ right.onclick = (event) => {
             element.classList.add("active");
             break;
         }
+    }
+}
+
+category.onchange = (event) => {
+    let index = category.selectedIndex;
+    console.log(index);
+    switch(index)
+    {
+        case 1: window.location.href = "Electronics.php"; break;
+        case 2: window.location.href = "Fashion.php"; break;
+        case 3: window.location.href = "Furnitures.php"; break;
+        case 4: window.location.href = "Homeappliances.php"; break;
     }
 }

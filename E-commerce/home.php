@@ -33,7 +33,7 @@
                     <figcaption>Your wishlist</figcaption>
                 </figure>
                 <figure class="icons">
-                    <span class="material-icons-outlined">shopping_cart</span>
+                    <span class="material-icons-outlined" id = "cart">shopping_cart</span>
                     <figcaption>Your Cart</figcaption>
                 </figure>
             </div>
@@ -94,11 +94,11 @@
                             <span>Social</span>
                         </div>
         </div>
-        <script src = "Assets/Scripts/homepage.js"></script>
-    </body>
+    <script src = "Assets/Scripts/homepage.js"></script>
     <script>
-    	if('<?php echo $value; ?>')
-    		login_button.remove();    		
+        if('<?php echo $value; ?>')
+    login_button.remove();  
     </script>
+    </body>
 </html>
 
